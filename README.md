@@ -1,6 +1,8 @@
 # telenot
 
-#Install sourcegit clone https://github.com/mehmehran/telenot
+#Install sourcegit
+
+git clone https://github.com/mehmehran/telenot
 
 cd telenot
 
