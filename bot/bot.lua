@@ -226,7 +226,7 @@ function create_config( )
     "banHammerE",
     "banHammerF",
     "invite",
-    "SetExpire
+    "SetExpire"
     },
     vip_users = {}, --vip users
     sudo_users = {288644074,tonumber(our_id)},--Sudo users
