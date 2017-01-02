@@ -6,14 +6,9 @@ git clone https://github.com/mehmehran/telenot
 
 cd telenot
 
-rm -rf tg
+chmod +x install
 
-git clone --recursive https://github.com/Rondoozle/tg.git
-
-
- chmod +x launch.sh
-
- ./launch.sh install  
+./install  
 
 ./launch.sh
 
