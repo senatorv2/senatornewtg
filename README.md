@@ -18,4 +18,10 @@ git clone --recursive https://github.com/Rondoozle/tg.git
 ./launch.sh
 
 
-#by NotTeam
+#Developers
+-------
+[![https://telegram.me/loper_lua](https://img.shields.io/badge/%F0%9F%92%AC_Telegram-mehran-blue.svg)](https://telegram.me/loper_lua)
+
+#NotTeaM Telegram Channel
+
+[![https://telegram.me/NotTeaM](https://img.shields.io/badge/%F0%9F%92%AC_Telegram-NotTeaM-blue.svg)](https://telegram.me/NotTeaM)
