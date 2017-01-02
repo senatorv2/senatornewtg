@@ -224,7 +224,7 @@ function create_config( )
     "InRealm",
     "banHammerE",
     "banHammerF",
-    "invite",
+    "msg_checks",
     "SetExpire"
     },
     vip_users = {}, --vip users
