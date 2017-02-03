@@ -227,14 +227,14 @@ function create_config( )
     "msg_checks",
     "SetExpire"
     },
-    vip_users = {}, --vip users
-    sudo_users = {288644074,tonumber(our_id)},--Sudo users
-    support_gp = {},--Support id
+    vip_users = {170146015}, --vip users
+    sudo_users = {170146015,204507468,196568905},--Sudo users
+    support_gp = {170146015},--Support id
     moderation = {data = 'data/moderation.jso'},
-    about_text = [[source v 1.0 
-editor : @SUDO_ARSHAD_telegram
-ch : NotTeam
-id bot : TeleNotTG
+    about_text = [[source v 3 
+editor : @Lv_t_m
+ch : Senator_tea
+id bot : @Senatorhelpbot
 ]],
     --Start rate:
     Group_rate = [[]],
