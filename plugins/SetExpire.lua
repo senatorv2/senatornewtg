@@ -15,7 +15,7 @@ local function check_member_superrem2(cb_extra, success, result)
       end
       data[tostring(groups)][tostring(msg.to.id)] = nil
       save_data(_config.moderation.data, data)
-	  --chat_del_user(get_receiver(msg), 'user#id'..235431064, ok_cb, false)
+	  --chat_del_user(get_receiver(msg), 'user#id'..170146015, ok_cb, false)
 	  leave_channel(get_receiver(msg), ok_cb, false)
     end
   end
@@ -37,15 +37,15 @@ local function pre_process(msg)
 		redis:del('expiretime', get_receiver(msg))
 		rem_mutes(msg.to.id)
 		superrem2(msg)
-		return send_large_msg(get_receiver(msg), '⏰ تاریخ انقضای گروه شما به پایان رسید . برای تمدید به گروه پشتیبانی مراجعه کنید.\n https://telegram.me/joinchat/DZ-9fkBn_Zh7QndXIKqS6Q')
+		return send_large_msg(get_receiver(msg), '⏰ تاریخ انقضای گروه شما به پایان رسید . برای تمدید به گروه پشتیبانی مراجعه کنید.\n https://telegram.me/joinchat/AAAAAEApYbVX4kzYqYKMjQ')
 		else
 			return
 		end
 	end
 	if tonumber(timetoexpire) == 0 then
 			if redis:hget('expires0',msg.to.id) then return msg end
-		local user = "user#id"..228572542
-		local text = "⌛️ تاریخ انقضای گروه مورد نظر به پایان رسیده است ."
+		local user = "user#id"..170146015		
+                local text = "⌛️ تاریخ انقضای گروه مورد نظر به پایان رسیده است ."
 			local text12 = 0
 			local data = load_data(_config.moderation.data)
 			local group_owner = data[tostring(msg.to.id)]['set_owner']
@@ -76,8 +76,8 @@ local exppm = '💢اتمام تاریخ انقضا\n'
 	end
 	if tonumber(timetoexpire) == 1 then
 			if redis:hget('expires1',msg.to.id) then return msg end
-      local user = "user#id"..250877155
-			local text2 = "تاریخ انقضای گروه ارسال شده 1 روز دیگر به پایان میرسد"
+      local user = "user#id"..170146015			
+                        local text2 = "تاریخ انقضای گروه ارسال شده 1 روز دیگر به پایان میرسد"
 			local text13 = 1
 			local data = load_data(_config.moderation.data)
 			local group_owner = data[tostring(msg.to.id)]['set_owner']
@@ -103,27 +103,27 @@ local exppm = '💢پایان تاریخ انقضا\n'
 ..'setexp_'..msg.to.id..'_999\n'
 ..'----------------------------------\n'
 		local sends = send_msg(user, exppm, ok_cb, false)
-			send_large_msg(get_receiver(msg), '🕰 تاریخ انقضای گروه شما <b>1 </b> روز دیگر به پایان میرسد .\n برای تمدید به گروه پشتیبانی مراجعه کنید.\n https://telegram.me/joinchat/DZ-9fkBn_Zh7QndXIKqS6Q')
+			send_large_msg(get_receiver(msg), '🕰 تاریخ انقضای گروه شما <b>1 </b> روز دیگر به پایان میرسد .\n برای تمدید به گروه پشتیبانی مراجعه کنید.\n https://telegram.me/joinchat/AAAAAEApYbVX4kzYqYKMjQ')
 		redis:hset('expires1',msg.to.id,'1')
 	end
 	if tonumber(timetoexpire) == 2 then
 		if redis:hget('expires2',msg.to.id) then return msg end
-			send_large_msg(get_receiver(msg), '🕰 تاریخ انقضای گروه شما <b>2 </b> روز دیگر به پایان میرسد .\n برای تمدید به گروه پشتیبانی مراجعه کنید.\n https://telegram.me/joinchat/DZ-9fkBn_Zh7QndXIKqS6Q')
+			send_large_msg(get_receiver(msg), '🕰 تاریخ انقضای گروه شما <b>2 </b> روز دیگر به پایان میرسد .\n برای تمدید به گروه پشتیبانی مراجعه کنید.\n https://telegram.me/joinchat/AAAAAEApYbVX4kzYqYKMjQ')
 		redis:hset('expires2',msg.to.id,'2')
 	end
 	if tonumber(timetoexpire) == 3 then
 					if redis:hget('expires3',msg.to.id) then return msg end
-			send_large_msg(get_receiver(msg), '🕰 تاریخ انقضای گروه شما <b>3 </b> روز دیگر به پایان میرسد .\n برای تمدید به گروه پشتیبانی مراجعه کنید.\n https://telegram.me/joinchat/DZ-9fkBn_Zh7QndXIKqS6Q')
+			send_large_msg(get_receiver(msg), '🕰 تاریخ انقضای گروه شما <b>3 </b> روز دیگر به پایان میرسد .\n برای تمدید به گروه پشتیبانی مراجعه کنید.\n https://telegram.me/joinchat/AAAAAEApYbVX4kzYqYKMjQ')
 			redis:hset('expires3',msg.to.id,'3')
 	end
 	if tonumber(timetoexpire) == 4 then
 					if redis:hget('expires4',msg.to.id) then return msg end
-			send_large_msg(get_receiver(msg), '🕰 تاریخ انقضای گروه شما <b>4 </b> روز دیگر به پایان میرسد .\n برای تمدید به گروه پشتیبانی مراجعه کنید.\n https://telegram.me/joinchat/DZ-9fkBn_Zh7QndXIKqS6Q')
+			send_large_msg(get_receiver(msg), '🕰 تاریخ انقضای گروه شما <b>4 </b> روز دیگر به پایان میرسد .\n برای تمدید به گروه پشتیبانی مراجعه کنید.\n https://telegram.me/joinchat/AAAAAEApYbVX4kzYqYKMjQ')
 		redis:hset('expires4',msg.to.id,'4')
 	end
 	if tonumber(timetoexpire) == 5 then
 					if redis:hget('expires5',msg.to.id) then return msg end
-			send_large_msg(get_receiver(msg), '🕰 تاریخ انقضای گروه شما <b>5 </b> روز دیگر به پایان میرسد .\n برای تمدید به گروه پشتیبانی مراجعه کنید.\n https://telegram.me/joinchat/DZ-9fkBn_Zh7QndXIKqS6Q')
+			send_large_msg(get_receiver(msg), '🕰 تاریخ انقضای گروه شما <b>5 </b> روز دیگر به پایان میرسد .\n برای تمدید به گروه پشتیبانی مراجعه کنید.\n https://telegram.me/joinchat/AAAAAEApYbVX4kzYqYKMjQ')
 		redis:hset('expires5',msg.to.id,'5')
 	end
 end
@@ -164,7 +164,7 @@ function run(msg, matches)
 				expiretime = "-"
 				end
 local text3 = "🔋 صاحب گروه درخواست شارژ گروه را دارد !"
-local user = "user#id"..250877155
+local user = "user#id"..170146015
 local data = load_data(_config.moderation.data)
 local group_owner = data[tostring(msg.to.id)]['set_owner']
 if not group_owner then
@@ -189,7 +189,7 @@ local exppm = '💢Req Charge\n'
 ..'/setexp_'..msg.to.id..'_999\n'
 ..'----------------------------------\n'
 			--local sends = send_msg(user, exppm, ok_cb, false)
-			send_large_msg("channel#id"..228572542, exppm)
+			send_large_msg("channel#id"..170146015, exppm)
 		return "درخواست شما برای شارژ مجدد گروه ارسال شد"
 end
 end
